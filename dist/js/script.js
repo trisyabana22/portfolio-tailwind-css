@@ -32,7 +32,7 @@ hamburger.addEventListener('click', function(){
 
 // klik diluar Hamburger
 window.addEventListener('click', function(e){
-    if(e.target != hamburger && e.target != navMenu){
+    if(e.target != hamburger && !e.target.classList.contains("hamburger-line") && e.target != navMenu){
         hamburger.classList.remove('hamburger-active');
         navMenu.classList.add('hidden');
         console.log('kliked');
